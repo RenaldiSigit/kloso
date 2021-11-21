@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Kloso Live Update Formulir </title>
+  <link rel="icon" type="image/jpg" href="favicon.png" />
+  <script src="./script.js"></script>
+  <style>
+    .m-top {
+      margin-top: 10px;
+    }
+
+    .textbox {
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <form id="Form1" name="Form1"">
+    <h2>Formulir Pendaftaran Anggota Kloso</h2>
+    <section class=" m-top">
+    <label>Nama Lengkap</label><br>
+    <input type="text" name="inputNama" id="nama" placeholder="Masukan Nama Lengkap" oninput="Tampil()" />
+    </section>
+    <br>
+    <section class="m-top">
+      <label>Angkatan</label>
+      <br>
+      <input type="text" name="inputAngkatan" id="email" placeholder="Angkatan" oninput="Tampil()" />
+    </section>
+    <br>
+    <section class="m-top">
+        <label>Jurusan : </label><br>
+        <input type="radio" id="TI" name="jurusan" value="Teknik Informatika" oninput="Tampil()"> 
+        <label for="TI">Teknik Informatika</label><br>
+        <input type="radio" id="ManInf" name="jurusan" value="Managemen Informatika" oninput="Tampil()">
+        <label for="ManInf">Managemen Informatika</label></br>
+      </section>
+    <br>
+    <section class="m-top">
+      <label>Jenis Kelamin</label><br>
+      <input type="radio" id="pria" name="gender" value="Pria" oninput="Tampil()"> 
+      <label for="pria">Pria</label><br>
+      <input type="radio" id="wanita" name="gender" value="Wanita" oninput="Tampil()">
+      <label for="wanita">Wanita</label></br>
+    </section>
+    <br>
+    <section class="m-top">
+      <label>Alasan Ikut UKM Kloso :</label><br />
+      <textarea name="Alasan" class="textarea" rows="8" cols="30" placeholder="Alasan Mengikuti Kloso"
+        oninput="Tampil()"></textarea>
+    </section>
+    <br>
+    <section class="m-top">
+        <label>Upload Foto</label><br>
+        <input type="file" name="foto" id="foto" oninput="Tampil()">
+    </section>
+    <section class="m-top">
+      <input type="button" name="Daftar" id="btnDaftar" value="Daftar" onclick="Tampil()" />
+      <input type="button" value="Reset" onclick="window.location.reload()">
+    </section>
+    <br>
+  </form>
+  <div id="Tampil" class="m-top"></div>
+</body>
+
+</html>
